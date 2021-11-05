@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -r build",
+    "copy-assets": "cp -rv assets build/assets",
     "compile": "tsc",
+    "postcompile": "npm run copy-assets",
     "start": "tsc && node ./build/main.js"
   },
   "author": "",

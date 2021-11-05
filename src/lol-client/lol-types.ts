@@ -1,3 +1,12 @@
+export enum TierDTO {
+    BRONZE = 'BRONZE',
+    SILVER = 'SILVER'
+}
+
+export enum QueueTypeDTO {
+    RANKED_SOLO_5x5 = 'RANKED_SOLO_5x5'
+}
+
 export interface SummonerDTO {
     accountId: string;	//Encrypted account ID. Max length 56 characters.
     profileIconId: number; //ID of the summoner icon associated with the summoner.
@@ -12,8 +21,8 @@ export interface LeagueEntryDTO {
     leagueId: string;
     summonerId: string;
     summonerName: string;
-    queueType: string;
-    tier: string;
+    queueType: QueueTypeDTO;
+    tier: TierDTO;
     rank: string;
     leaguePoints: number;
     wins: number;
